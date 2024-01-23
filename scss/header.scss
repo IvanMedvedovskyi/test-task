@@ -1,0 +1,121 @@
+@import '../mixins/mixins';
+
+header {
+  background-image: url("../image/back.png");
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.container {
+  position: relative;
+
+  @include container(100%, 1440px, 0 auto);
+
+  .header__links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 44px 100px 99px 100px;
+
+    &-left-side {
+      .link {
+        text-decoration: none;
+        padding-bottom: 5px;
+        border-bottom: 1px solid transparent;
+        transition: border-bottom 0.3s ease;
+        @include text(white, Poppins, 20px, normal, 500, normal);
+
+        &:hover {
+          border-bottom: 3px solid #C4C4C4;
+        }
+      }
+    }
+
+    &-mid-side {
+      .link {
+        text-decoration: none;
+        position: relative;
+        padding-bottom: 5px;
+        border-bottom: 1px solid transparent; /* Добавляем пустую границу */
+        transition: border-bottom 0.3s ease;
+        @include text(white, Poppins, 15px, normal, 500, normal);
+
+        &:not(:last-child) {
+          margin-right: 5rem;
+        }
+
+        &:hover {
+          border-bottom: 3px solid #C4C4C4;
+        }
+
+      }
+    }
+
+    &-right-side {
+
+      .link {
+        margin-right: 25px;
+        text-decoration: none;
+        padding-bottom: 5px;
+        border-bottom: 1px solid transparent; /* Добавляем пустую границу */
+        transition: border-bottom 0.3s ease;
+
+        @include text(#FFF, Poppins, 15px, normal, 500, normal);
+
+        &:hover {
+          border-bottom: 3px solid #C4C4C4;
+        }
+      }
+
+      .login {
+
+        @include text(#FFF, Poppins, 15px, normal, 500, normal);
+        @include button(100px, linear-gradient(130deg, #FF7B4E 15.57%, #FF584E 95.03%),  13px 44px, 0);
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+  }
+
+  .header__content {
+    margin-left: 100px;
+    &-text-information {
+      &-explore-world .text{
+        margin-bottom: 7px;
+        padding: 12px 31px;
+        max-width: fit-content;
+        border-radius: 15px;
+        background: rgba(255, 255, 255, 0.25);
+        @include text(#FFF, Poppins, 18px, normal, 500, normal)
+      }
+
+      &-text-title .title {
+        max-width: 37.688rem;
+        margin-bottom: 30px;
+        @include text(#FFF, Poppins, 55px, normal, 600, normal)
+      }
+
+      &-description .description{
+        padding-bottom: 4.25rem;
+        max-width: 519px;
+        opacity: 0.5;
+        @include text(#FFF, Poppins, 25px, normal, 600, normal)
+      }
+
+      &-button{
+        padding-bottom: 201px;
+
+        .exsplore-now{
+          @include text(#FEFEFE, Poppins, 25px, normal, 600, normal);
+          @include button(27px, linear-gradient(130deg, #FF7B4E 15.57%, #FF584E 95.03%),  27px 47px, 0);
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

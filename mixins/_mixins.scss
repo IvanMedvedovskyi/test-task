@@ -1,0 +1,21 @@
+@mixin container($width, $max-width, $margin) {
+  width: $width;
+  max-width: $max-width;
+  margin: $margin;
+}
+
+@mixin text($color, $fontFamily, $fontSize, $fontStyle, $fontWeight, $lineHeight) {
+  color: $color;
+  font-family: $fontFamily;
+  font-size: $fontSize;
+  font-style: $fontStyle;
+  font-weight: $fontWeight;
+  line-height: $lineHeight;
+}
+
+@mixin button($borderRadius, $background, $paddings, $border) {
+  border-radius: $borderRadius;
+  background: $background;
+  padding: $paddings;
+  border: $border
+}
